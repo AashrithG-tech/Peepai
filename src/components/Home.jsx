@@ -5,6 +5,7 @@ function Hero() {
             style={{
                 backgroundImage: "url('/2461b7e4c6a5e38efcbff996427187cf.jpg.jpeg')",
             }}
+            id="home"
         >
 
             <div className="absolute inset-0 bg-black/60 flex items-center justify-center">
@@ -26,11 +27,20 @@ function Hero() {
                     <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
 
                         <button className="bg-teal-900 text-yellow-400 px-8 py-3 rounded-full font-semibold tracking-wide hover:bg-teal-800 transition cursor-pointer">
-                            BOOK TABLE
+                            <a href="#booking" className="hover:text-white transition">
+                                BOOK TABLE
+
+                            </a>
                         </button>
 
                         <button className="bg-yellow-400 text-black px-8 py-3 rounded-full font-semibold tracking-wide hover:bg-yellow-300 transition cursor-pointer">
-                            VIEW MENU
+                            <a
+                                href="/menu.pdf?v=1"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                VIEW MENU
+                            </a>
                         </button>
 
                     </div>

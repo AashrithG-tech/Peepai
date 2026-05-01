@@ -5,6 +5,7 @@ function About() {
             style={{
                 backgroundImage: "url('/9587e8ad1314b6a8115c7359e860c240.avif')",
             }}
+            id="about"
         >
 
             <div className="absolute inset-0 bg-black/70"></div>

@@ -38,7 +38,7 @@ function SignatureBrews() {
         <section
             className="relative w-full py-20 bg-cover bg-center"
             style={{
-                backgroundImage: "url('70155c4dde2d870136c338420c5290ad.jpg.jpeg')",
+                backgroundImage: "url('image5.jpeg')",
             }}
         >
 
@@ -90,7 +90,13 @@ function SignatureBrews() {
 
 
                 <button className="mt-12 bg-yellow-400 text-black px-8 py-3 rounded-full font-semibold tracking-wide hover:bg-yellow-300 transition cursor-pointer">
-                    VIEW FULL MENU
+                    <a
+                        href="/menu.pdf?v=1"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        VIEW FULL MENU
+                    </a>
                 </button>
 
             </div>

@@ -22,20 +22,36 @@ function Navbar() {
                         HOME
                     </li>
                     <li className="cursor-pointer hover:text-yellow-400 transition">
-                        ABOUT
+                        <a href="#about" className="hover:text-white transition">
+                            ABOUT
+
+                        </a>
                     </li>
                     <li className="cursor-pointer hover:text-yellow-400 transition">
-                        MENU
+                        <a
+                            href="/menu.pdf?v=1"
+                            target="_blank"
+                            rel="noopener noreferrer"
+
+                        >
+                            VIEW MENU
+                        </a>
                     </li>
                     <li className="cursor-pointer hover:text-yellow-400 transition">
-                        GALLERY
+                        <a href="#gallery" className="hover:text-white transition">
+                            GALLERY
+
+                        </a>
                     </li>
                 </ul>
 
 
                 <div className="hidden md:block">
                     <button className="bg-teal-900 text-yellow-400 px-6 py-2 rounded-full tracking-wider font-semibold hover:bg-teal-800 transition cursor-pointer">
-                        BOOK TABLE
+                        <a href="#booking" className="hover:text-white transition">
+                            BOOK TABLE
+
+                        </a>
                     </button>
                 </div>
 
