@@ -68,7 +68,7 @@ function Footer() {
                             rel="noopener noreferrer"
                             className="hover:text-white underline"
                         >
-                            Bengaluru, India
+                            Kodigehalli Gate, Bengaluru, India
                         </a>
                     </p>
 
