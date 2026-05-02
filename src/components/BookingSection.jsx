@@ -1,4 +1,5 @@
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 function BookingSection() {
     const [form, setForm] = useState({
@@ -8,21 +9,46 @@ function BookingSection() {
         guests: "",
     });
 
+    const [success, setSuccess] = useState(false);
+
     const handleChange = (e) => {
         setForm({ ...form, [e.target.name]: e.target.value });
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(form);
-        alert("Table booked successfully!");
+
+        emailjs.send(
+            "service_c4uieg3",
+            "template_1fnfcwr",
+            {
+                name: form.name,
+                date: form.date,
+                time: form.time,
+                guests: form.guests,
+            },
+            "o5PKGWer092UTdcpm"
+        )
+            .then(() => {
+                setSuccess(true);
+                setForm({
+                    name: "",
+                    date: "",
+                    time: "",
+                    guests: "",
+                });
+            })
+            .catch((error) => {
+                console.log(error);
+                alert("Something went wrong. Please try again.");
+            });
     };
 
     return (
         <section
             className="relative w-full py-20 bg-cover bg-center"
             style={{
-                backgroundImage: "url('image9.jpeg')", // 🔁 add your bg
+                backgroundImage: "url('image9.jpeg')",
             }}
             id="booking"
         >
@@ -40,6 +66,13 @@ function BookingSection() {
                 <p className="text-white text-lg mb-10">
                     Book your spot and get ready for an unforgettable experience.
                 </p>
+
+                {/* Success Message */}
+                {success && (
+                    <p className="text-green-400 mb-6 font-semibold">
+                        ✅ Booking request sent! We’ll contact you shortly.
+                    </p>
+                )}
 
                 {/* Form Card */}
                 <div className="bg-yellow-400 opacity-92 text-black rounded-2xl p-8 md:p-10 max-w-2xl mx-auto shadow-lg">
